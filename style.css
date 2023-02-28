@@ -1,0 +1,122 @@
+form {
+    background-color: white;
+    border: 1px solid #f9fafb;
+    box-sizing: border-box;
+    box-shadow: 0px -5px -5px rgba(53, 52, 52, 0.302);;
+    box-shadow: 0px 3px 5px rgb(53 52 52 / 30%)
+}
+
+html {
+    overflow: hidden;
+}
+
+legend{
+    margin: 5px 5%;
+    font-size: 1.5em;
+}
+
+.row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 3% 5%;
+    width: 100%;
+}
+.col{
+    display: flex;
+    width: 29%;
+    margin-right: 9%;
+    flex-direction: column;
+}
+.row input {
+    margin:0;
+    height: 5%;
+    padding: 0;
+    border: 1 solid #E5E7EB;
+}
+
+.row label {
+    font-size: 0.5em;
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #f9fafb;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FAF9F6;
+}
+.side-panel {
+    height: 100vh;
+    width: 59%;
+}
+.side-panel img{
+    height: 100%;
+}
+#logo{
+    height: 80%;
+}
+.container{
+    display: flex;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    margin: 0 5%;
+    background-color: #596D48;
+    width: 20%;
+    margin-top: 5%;
+    height: 5%;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+header{
+    margin-left: 5%;
+    font-weight: bold;
+    position: relative;
+    bottom: 5%;
+    font-size: 1.2em;
+}
+
+.signup{
+    margin: 5% 0 0 5%;
+}
+
+.logo p {
+    height: 100%;
+    top: 25%;
+    font-size: 9vh;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    width: 37.1%;
+    top: 22%;
+    height: 14%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: Norse-Bold !important;
+    font-size: 4rem;
+}
+@font-face {
+    font-family: Norse-Bold;
+    src: url("./Norse-Bold.otf");
+}
