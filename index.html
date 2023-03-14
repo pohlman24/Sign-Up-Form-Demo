@@ -32,42 +32,65 @@
                 <legend>Let's do this!</legend>
                 <div class="row">
                     <div class="col">
-                        <label>FIRST NAME</label>
-                        <input type="text">
+                        <label for="firstName">FIRST NAME</label>
+                        <input type="text" id="firstName" name="firstName">
                     </div>
             
                     <div class="col">
                         <label for="last_name">LAST NAME</label>
-                        <input type="text">
+                        <input id="last_name" name="last_name" type="text">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <label>EMAIL</label>
-                        <input type="email">
+                        <label for="email">EMAIL</label>
+                        <input id="email" name="email"type="email">
                     </div>
 
                     <div class="col">
-                        <label for="">PHONE NUMBER</label>
-                        <input type="tel"></input>
+                        <label for="phoneNumber">PHONE NUMBER</label>
+                        <input minlength="10" id="phoneNumber" name="phoneNumber" type="tel"></input>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <label for="">PASSWORD</label>
-                        <input type="password"></input>
+                        <label for="password">PASSWORD</label>
+                        <input name="password" id="password" type="password"></input>
                     </div>
 
                     <div class="col">
-                        <label for="">CONFIRM PASSWORD</label>
-                        <input type="password"></input>
+                        <label for="confirmPass">CONFIRM PASSWORD</label>
+                        <input name="confirmPass" id="confirmPass" type="password"></input>
                     </div>
                 </div>
             </form>
             <button type="submit">Create Account</button>
 
-            <p class="signup">Already have an account? <span style="color: #596d48; font-weight: bold;">Log in</span></p>
+            <p class="signup">Already have an account? <span style="color: #596d48; font-weight: bold; cursor:pointer;">Log in</span></p>
         </div>
     </div>
 </body>
 </html>
+
+<script>
+    const confirmPass = document.getElementById("confirmPass");
+    const confirmPassText = confirmPass.value;
+    const pass = document.getElementById("password");
+    const passText = pass.value;
+
+    function isSame(){
+        if (pass.value !== confirmPass.value) {
+            confirmPass.style.borderColor = 'red';
+            pass.style.borderColor = 'red';
+        }
+        else{
+            confirmPass.style.borderColor = '#E5E7EB';
+            pass.style.borderColor = '#E5E7EB';
+        }
+    }
+    confirmPass.addEventListener("focus", isSame);
+    pass.addEventListener("focus", isSame);
+    confirmPass.addEventListener("blur", isSame);
+        pass.addEventListener("blur", isSame);
+
+</script>
