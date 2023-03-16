@@ -2,8 +2,10 @@ form {
     background-color: white;
     border: 1px solid #f9fafb;
     box-sizing: border-box;
-    box-shadow: 0px -5px -5px rgba(53, 52, 52, 0.302);;
-    box-shadow: 0px 3px 5px rgb(53 52 52 / 30%)
+    box-shadow: 0px -5px -5px rgba(53, 52, 52, 0.302);
+    box-shadow: 0px 3px 5px rgb(53 52 52 / 30%);
+    width: 90%;
+    border-radius: 10px;
 }
 
 html {
@@ -24,7 +26,7 @@ legend{
 }
 .col{
     display: flex;
-    width: 29%;
+    max-width: 50%;
     margin-right: 9%;
     flex-direction: column;
 }
@@ -36,13 +38,13 @@ legend{
 }
 
 .row input:focus {
-    border-color: blue;
+    border-color: blue !important;
     box-shadow: 1px 2px 3px 1px gray;
 }
 
 .row label {
     margin-bottom: 1px;
-    font-size: 0.5em;
+    font-size: 0.9em;
     letter-spacing: 1px;
 }
 
@@ -57,6 +59,7 @@ body{
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #FAF9F6;
+    width: 100%;
 }
 .side-panel {
     height: 100vh;
@@ -71,6 +74,7 @@ body{
 }
 .container{
     display: flex;
+    width: 100%;
 }
 
 .content{
@@ -82,17 +86,17 @@ body{
 }
 
 button {
-    margin: 0 5%;
+    margin: 5% 5% 0 5%;
     background-color: #596D48;
-    width: 20%;
-    margin-top: 5%;
+    width: 9vw;
+    min-width: 150px;
     height: 5%;
+    min-height: 40px;
     border-radius: 10px;
-    color: white;
     border: none;
+    color: white;
     font-weight: bold;
     cursor: pointer;
-    min-height: 30px
 }
 
 header{
@@ -134,4 +138,100 @@ header{
 @font-face {
     font-family: Norse-Bold;
     src: url("./Norse-Bold.otf");
+}
+
+
+/* * * * * * * * *\
+ *  GitHub Icon  *
+\* * * * * * * * */
+
+.github-link {
+    display: block;
+    margin: 1.5em 2em 0 0;
+    position: fixed;
+    right: 0;
+    transition: all 0.3s ease-out;
+    top: 0;
+}
+
+.github-link:hover,
+.github-link:focus {
+    transform: rotate(360deg) scale(1.5);
+}
+
+.github-icon {
+    filter: drop-shadow(0.1em 0.1em 0.1em rgba(0,0,0,0.5));
+    height: 2em;
+    transition: all 0.3s ease-out;
+    width: 2em;
+}
+
+.github-link:hover .github-icon,
+.github-link:focus .github-icon {
+    filter: drop-shadow(0 0 0.2em #6e8fa7);
+}
+
+.github-path {
+    fill: #709a5e;
+}
+
+/* * * * * * * * * *\
+ *  Media Queries  *
+\* * * * * * * * * */
+
+@media screen and (max-width: 800px){
+    .row{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html{
+        overflow-y: scroll;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .side-panel{
+        width: 100%;
+        margin: 0;
+    }
+    .logo{
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .content{
+        min-width: 100%;
+        width: 100%;
+        margin: 0;
+        min-height: 100vh;
+    }
+
+    .github-link:hover .github-icon, 
+    .github-link:focus .github-icon { 
+        filter: drop-shadow(0 0 0.2em #fff);
+    }
+    .github-path { 
+        fill: #fff; 
+    }
+
+    header {
+        width: 100%;
+        position: relative;
+        font-size: 1em;
+        margin: 0;
+        margin-bottom: 12vh;
+    }
+
+    header p {
+        width: 75%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0px);
+    }
+    form {
+        width: 100%;
+    }
 }
